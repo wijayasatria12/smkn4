@@ -21,6 +21,9 @@
     </div>
 
     {{-- Daftar Galeri --}}
+
+    @if($galeris->count() > 0)
+
     <div class="card border-0 shadow-sm" style="background: #1f2937;">
         <div class="table-responsive">
             <table class="table table-hover align-middle mb-0"
@@ -34,8 +37,8 @@
 
                 <thead style="background: #111827; color: #fff;">
                     <tr>
-                        <th class="px-4 py-3">Gambar</th>
-                        <th class="py-3">Judul</th>
+                        <th class="px-4 py-3 text-center">Gambar</th>
+                        <th class="py-3 text-center">Judul</th>
                         <th class="py-3 text-center">Aksi</th>
                     </tr>
                 </thead>
@@ -44,7 +47,7 @@
                     @forelse($galeris as $galeri)
                         <tr>
                             {{-- Gambar --}}
-                            <td class="px-4">
+                            <td class="px-4 py-3 text-center">
                                 <img
                                     src="{{ asset('storage/galeri/' . $galeri->gambar) }}"
                                     alt="{{ $galeri->judul }}"
@@ -58,8 +61,8 @@
                             </td>
 
                             {{-- Judul --}}
-                            <td>
-                                <span class="fw-semibold text-white">{{ $galeri->judul }}</span>
+                            <td class="text-center">
+                                <span class="fw-semibold text-secondary">{{ $galeri->judul }}</span>
                             </td>
 
                             {{-- Aksi --}}
@@ -83,21 +86,34 @@
                                 </div>
                             </td>
                         </tr>
-                    @empty
-                        <tr>
-                            <td colspan="3" class="text-center py-5">
-                                <h5 class="fw-semibold mb-2 text-white">Belum Ada Foto</h5>
-                                <p class="mb-4" style="color: #a0a0a0;">Belum ada foto yang ditambahkan.</p>
-                                <a href="{{ route('dashboard.galeri.create') }}"
-                                   class="btn text-white"
-                                   style="background-color: #198754;">Tambah Foto</a>
-                            </td>
-                        </tr>
-                    @endforelse
+
+                    @endforeach
+
                 </tbody>
             </table>
         </div>
     </div>
 </div>
+@else
+
+<div class="card border-0 shadow-sm" style="background: #1f2937;">
+
+    <div class="text-center py-5">
+
+        <h5 class="fw-semibold mb-2 text-white">Belum Ada Foto</h5>
+
+        <p class="mb-4 text-secondary">Belum ada foto yang ditambahkan.</p>
+
+        <a href="{{ route('dashboard.galeri.create') }}"
+           class="btn text-white"
+           style="background-color: #198754;">
+            Tambah Foto
+        </a>
+
+    </div>
+
+</div>
+
+@endif
 
 @endsection

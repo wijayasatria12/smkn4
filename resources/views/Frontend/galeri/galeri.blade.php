@@ -11,7 +11,7 @@
             <p>Kumpulan dokumentasi kegiatan, fasilitas, dan momen di SMKN 4 Bogor</p>
         </div>
 
-        <div class="row g-4" data-aos="fade-up">
+        <div class="row g-4">
 
             @forelse($galeris as $galeri)
 

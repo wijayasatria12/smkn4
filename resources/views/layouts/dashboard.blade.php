@@ -9,6 +9,8 @@
         @yield('title', 'Dashboard Admin') - SMKN 4 Bogor
     </title>
 
+    <link rel="shortcut icon" href="{{ asset('assets/images/logo ss.ico') }}">
+    
     {{-- Bootstrap --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 

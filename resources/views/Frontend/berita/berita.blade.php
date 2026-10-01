@@ -2,7 +2,7 @@
 
 @section('content')
 {{-- Berita --}}
-<section id="berita" class="berita-page" data-aos="fade-up">
+<section id="berita" class="berita-page">
     <div class="container py-5">
         <div class="header-berita text-center">
             <h2 class="fw-bold text-hijau">Berita SMKN 4 Bogor</h2>

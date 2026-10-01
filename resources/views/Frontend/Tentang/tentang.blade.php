@@ -2,7 +2,7 @@
 
 @section('content')
 {{-- Tentang --}}
-<section id="tentang" class="py-4" style="margin-top: 70px;" data-aos="fade-up">
+<section id="tentang" class="py-4" style="margin-top: 70px;">
     <div class="container py-4 mt-5">
         <div class="row align-items-center g-5">
             <div class="col-lg-6">
