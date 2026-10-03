@@ -334,6 +334,64 @@ main {
 .galeri-item:hover .galeri-overlay {
     opacity: 1;
 }
+/* =========================
+   FEEDBACK PENGGUNA
+   ========================= */
+
+.feedback-section {
+    background: #f8faf9;
+    padding-top: 80px !important;
+    padding-bottom: 48px;
+}
+
+.feedback-card {
+    width: 100%;
+    max-width: 100%;
+    background: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 12px;
+    padding: 24px 30px;
+    box-shadow: none;
+}
+
+.feedback-card .form-control {
+    border: 1px solid #dee2e6;
+    color: #6c757d;
+    opacity: 1;
+    border-radius: 7px;
+    padding: 10px 12px;
+    font-size: 14px;
+}
+
+.feedback-card .form-control:focus {
+    border-color: #198754;
+    box-shadow: 0 0 0 0.15rem rgba(25, 135, 84, 0.12);
+}
+
+.feedback-card .form-select {
+    border: 1px solid #dee2e6;
+    border-radius: 7px;
+    padding: 10px 12px;
+    font-size: 14px;
+}
+
+.feedback-card .form-select:focus {
+    border-color: #198754;
+    box-shadow: 0 0 0 0.15rem rgba(25, 135, 84, 0.12);
+}
+
+.feedback-submit {
+    background: #198754;
+    color: #ffffff;
+    border: none;
+    padding: 9px 24px;
+    border-radius: 7px;
+}
+
+.feedback-submit:hover {
+    background: #157347;
+    color: #ffffff;
+}
 
 /* =========================
    KONTAK
@@ -375,6 +433,10 @@ main {
    FOOTER
 ========================= */
 
+.bg-footer {
+    background-color: #1F2937 !important;
+}
+
 .bg-hijau {
     background-color: #198754 !important;
 }
@@ -386,7 +448,7 @@ main {
 
 .footer-brand h2 {
     font-size: 30px;
-    color: #222;
+    color: #fff;
 }
 
 .footer-nav {

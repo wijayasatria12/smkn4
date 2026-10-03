@@ -174,6 +174,87 @@
     </div>
 </section>
 
+{{-- Feedback Pengguna --}}
+<section class="feedback-section py-5">
+    <div class="container">
+
+        <div class="text-center mb-4">
+            <h2 class="fw-bold text-hijau mb-2">
+                Bagaimana Kepuasan Anda?
+            </h2>
+
+            <p class="text-secondary mb-0">
+                Berikan penilaian dan saran untuk membantu kami meningkatkan website SATSET.
+            </p>
+        </div>
+
+        <div class="feedback-card mx-auto">
+
+            <form action="{{ route('feedback.store') }}" method="POST">
+
+                @csrf
+
+                {{-- Nama --}}
+                <div class="mb-3 text-start">
+                    <label for="nama" class="form-label fw-semibold">
+                        Nama
+                    </label>
+
+                    <input
+                        type="text"
+                        name="nama"
+                        id="nama"
+                        class="form-control"
+                        placeholder="Masukkan nama Anda"
+                        required>
+                </div>
+
+                {{-- Kepuasan --}}
+                    <div class="mb-3 text-start">
+                        <label for="rating" class="form-label fw-semibold">
+                            Seberapa puas Anda dengan website SATSET?
+                        </label>
+
+                        <select name="rating" id="rating" class="form-select" required>
+                            <option value="" selected disabled>
+                                Pilih tingkat kepuasan
+                            </option>
+                            <option value="1">1. Sangat Tidak Puas</option>
+                            <option value="2">2. Tidak Puas</option>
+                            <option value="3">3. Cukup Puas</option>
+                            <option value="4">4. Puas</option>
+                            <option value="5">5. Sangat Puas</option>
+                        </select>
+                    </div>
+
+                {{-- Pesan --}}
+                <div class="mb-4 text-start">
+                    <label for="pesan" class="form-label fw-semibold">
+                        Saran atau Masukan
+                    </label>
+
+                    <textarea
+                        name="pesan"
+                        id="pesan"
+                        rows="4"
+                        class="form-control"
+                        placeholder="Tuliskan saran atau masukan Anda..."
+                        required></textarea>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn feedback-submit">
+                        Kirim Pesan
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+</section>
+
 {{-- kontak --}}
 <section class="contact-section kontak-page pt-5" id="kontak">
 <div class="text-center mb-5">

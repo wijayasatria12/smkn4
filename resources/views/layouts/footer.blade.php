@@ -1,5 +1,5 @@
 {{-- Footer --}}
-<footer class="footer bg-white text-dark mt-5">
+<footer class="footer bg-footer text-white mt-5">
     <div class="footer-content mx-auto py-5 px-3 d-flex flex-column align-items-center text-center">
         <div class="footer-brand d-flex flex-column align-items-center text-center">
             <h2 class="fw-bold mb-0">SATSET - Galeri SMK Negeri 4 Bogor</h2>

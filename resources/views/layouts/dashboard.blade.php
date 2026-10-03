@@ -64,6 +64,10 @@
     <a href="{{ route('dashboard.galeri.index') }}"
        class="text-decoration-none rounded px-3 py-2 text-white"
        style="{{ request()->routeIs('dashboard.galeri.*') ? 'background-color: #026a43;' : '' }}">Galeri</a>
+
+    <a href="{{ route('dashboard.feedback') }}"
+       class="text-decoration-none rounded px-3 py-2 text-white"
+       style="{{ request()->routeIs('dashboard.feedback*') ? 'background-color: #026a43;' : '' }}">Pesan</a>
     </nav>
 
     {{-- Logout --}}

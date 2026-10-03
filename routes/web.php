@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\GaleriController;
+use App\Http\Controllers\FeedbackController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -13,6 +14,9 @@ Route::get('/', function () {
 
     return view('welcome', compact('beritas', 'galeris'));
 })->name('home');
+
+Route::post('/feedback', [FeedbackController::class, 'store'])
+    ->name('feedback.store');
 
 Route::get('/tentang', function () {
     return view('Frontend.tentang.tentang');
@@ -75,4 +79,16 @@ Route::resource('/dashboard/berita', BeritaController::class)
 Route::resource('/dashboard/galeri', GaleriController::class)
     ->names('dashboard.galeri')
     ->except(['show'])
+    ->middleware('auth');
+
+// ================================
+// FEEDBACK
+// ================================
+
+Route::get('/dashboard/feedback', [FeedbackController::class, 'index'])
+    ->name('dashboard.feedback')
+    ->middleware('auth');
+
+Route::delete('/dashboard/feedback/{feedback}', [FeedbackController::class, 'destroy'])
+    ->name('dashboard.feedback.destroy')
     ->middleware('auth');
