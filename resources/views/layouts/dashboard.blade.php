@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>
-        @yield('title', 'Dashboard Admin') - SMKN 4 Bogor
+        @yield('title', 'Dashboard Admin') - SATSET
     </title>
 
     <link rel="shortcut icon" href="{{ asset('assets/images/logo ss.ico') }}">
