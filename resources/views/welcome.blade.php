@@ -180,7 +180,7 @@
 
         <div class="text-center mb-4">
             <h2 class="fw-bold text-hijau mb-2">
-                Bagaimana Kepuasan Anda?
+                Pesan & Kesan
             </h2>
 
             <p class="text-secondary mb-0">

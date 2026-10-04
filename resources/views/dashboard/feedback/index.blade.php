@@ -7,12 +7,9 @@
 @section('content')
 
 <div class="container-fluid">
-
     <div class="mb-4">
         <h1 class="fw-semibold mb-2 text-white">Pesan</h1>
-        <p class="text-secondary mb-0">
-            Lihat masukan dan tingkat kepuasan pengguna terhadap website SATSET.
-        </p>
+        <p class="text-secondary mb-0">Lihat masukan dan tingkat kepuasan pengguna terhadap website SATSET.</p>
     </div>
 
     @if($feedbacks->count() > 0)
@@ -144,23 +141,12 @@
 
         <div class="card border-0 shadow-sm"
              style="background: #1f2937;">
-
             <div class="text-center py-5">
-
-                <h5 class="fw-semibold mb-2 text-white">
-                    Belum Ada Feedback
-                </h5>
-
-                <p class="text-secondary mb-0">
-                    Belum ada feedback yang diberikan oleh pengguna.
-                </p>
-
+                <h5 class="fw-semibold mb-2 text-white">Belum Ada Pesan</h5>
+                <p class="text-secondary mb-0">Belum ada pesan yang diberikan oleh pengguna.</p>
             </div>
-
         </div>
-
     @endif
-
 </div>
 
 @endsection

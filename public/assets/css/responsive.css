@@ -1,0 +1,135 @@
+/* ========================================
+   RESPONSIVE WEBSITE SATSET
+======================================== */
+
+
+/* ========================================
+   NAVBAR - DEFAULT / DESKTOP
+======================================== */
+
+.menu-toggle,
+.menu-button {
+    display: none;
+}
+
+.mobile-login {
+    display: none;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 991.98px) {
+
+    .navbar .container {
+        position: relative;
+        flex-wrap: wrap;
+    }
+
+    /* Tombol hamburger */
+    .menu-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 42px;
+        height: 42px;
+
+        margin-left: auto;
+
+        font-size: 25px;
+        color: #198754;
+
+        cursor: pointer;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    /* Sembunyikan tombol Masuk desktop */
+    .desktop-login {
+        display: none !important;
+    }
+
+    /* Menu navbar */
+    .navbar .navbar-nav {
+        display: none !important;
+
+        position: static !important;
+
+        width: 100%;
+
+        flex-direction: column !important;
+
+        gap: 0 !important;
+
+        transform: none !important;
+
+        margin-top: 15px;
+
+        padding: 10px 0;
+
+        border-top: 1px solid #eeeeee;
+    }
+
+    /* Ketika hamburger dibuka */
+    .menu-toggle:checked ~ .navbar-nav {
+        display: flex !important;
+    }
+
+    /* Link navbar */
+    .navbar .navbar-nav .nav-link {
+        padding: 10px 5px;
+        font-size: 16px !important;
+    }
+
+    /* Link aktif */
+    .navbar .navbar-nav .nav-link.active {
+        color: #198754;
+    }
+
+    /* =========================
+       MASUK DI DALAM MENU
+    ========================= */
+
+    .mobile-login {
+        display: block;
+
+        margin-top: 8px !important;
+
+        padding-top: 10px;
+
+        border-top: 1px solid #eeeeee;
+    }
+
+    .mobile-login .nav-link {
+        display: block;
+
+        background: #198754;
+        color: #ffffff !important;
+
+        text-align: center;
+
+        font-weight: 600;
+
+        border-radius: 7px;
+
+        padding: 10px 15px !important;
+    }
+
+    .mobile-login .nav-link:hover {
+        background: #157347;
+        color: #ffffff !important;
+    }
+
+}
+
+/* Khusus iPhone XR / lebar 414px */
+@media (width: 414px) {
+    .menu-button {
+        transform: translateX(-12px);
+    }
+}
