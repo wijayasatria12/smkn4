@@ -62,11 +62,11 @@
 
         </ul>
 
-        {{-- Masuk khusus desktop --}}
+        <!-- {{-- Masuk khusus desktop --}}
         @if(request()->routeIs('home'))
             <a href="{{ route('login') }}" class="btn-masuk desktop-login">
                 Masuk</a>
-        @endif
+        @endif -->
 
     </div>
 </nav>
