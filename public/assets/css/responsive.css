@@ -133,3 +133,43 @@
         transform: translateX(-12px);
     }
 }
+
+/* =========================
+   RESPONSIVE KONTAK
+========================= */
+
+@media (max-width: 991.98px) {
+
+    .contact-card.contact-info {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 25px;
+        padding: 25px;
+    }
+
+    .contact-info-left {
+        width: 100%;
+        flex: none;
+    }
+
+    .contact-item {
+        width: 100%;
+    }
+
+    .contact-item p {
+        word-break: normal;
+        overflow-wrap: break-word;
+    }
+
+    .contact-map {
+        width: 100%;
+        max-width: 100%;
+        height: 220px;
+        flex-shrink: 0;
+    }
+
+    .contact-map iframe {
+        width: 100%;
+        height: 100%;
+    }
+}
