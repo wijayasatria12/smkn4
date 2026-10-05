@@ -15,45 +15,65 @@
 
     </div>
 </section>
+
 {{-- statistik --}}
 <section id="statistik">
-    <div class="container" >
+    <div class="container">
         <div class="row">
+
+            {{-- PPLG --}}
             <div class="col-lg-3">
-                <div class="bg-white rounded-3 shadow p-3 d-flex align-items-center">
-                    <div class="stat-text ms-3">
-                        <h5>Pengembangan Perangkat Lunak Dan Gim</h5>
+                <a href="{{ route('detailpplg') }}" class="statistik-link">
+                    <div class="bg-white rounded-3 shadow p-3 d-flex align-items-center">
+                        <div class="stat-text ms-3">
+                            <h5>Pengembangan Perangkat Lunak Dan Gim</h5>
+                        </div>
+
+                        <img src="{{ asset('assets/images/pplg.png') }}"
+                             width="100"
+                             height="100"
+                             class="ms-auto"
+                             alt="PPLG">
                     </div>
-                    <img src="{{ asset('assets/images/pplg.png') }}" width="100" height="100" class="ms-auto" alt="Siswa Aktif">
-                </div>
+                </a>
             </div>
 
-            <div class="col-lg-3">
+            {{-- TKJ --}}
+        <div class="col-lg-3">
+            <a href="{{ route('detailtkj') }}" class="statistik-link">
                 <div class="bg-white rounded-3 shadow p-3 d-flex align-items-center">
                     <div class="stat-text ms-3">
                         <h5>Teknik Jaringan Komputer Dan Telekomunikasi</h5>
                     </div>
-                    <img src="{{ asset('assets/images/tkj.png') }}" width="100" height="100" class="ms-auto" alt="Guru & Staff">
+                    <img src="{{ asset('assets/images/tkj.png') }}" width="100" height="100" class="ms-auto" alt="TKJ">
                 </div>
-            </div>
+            </a>
+        </div>
 
+            {{-- TO --}}
             <div class="col-lg-3">
-                <div class="bg-white rounded-3 shadow p-3 d-flex align-items-center">
-                    <div class="stat-text ms-3">
-                        <h5>Teknik Kendaraan Ringan Dan Otomotif</h5>
+                <a href="{{ route('detailto') }}" class="statistik-link">
+                    <div class="bg-white rounded-3 shadow p-3 d-flex align-items-center">
+                        <div class="stat-text ms-3">
+                            <h5>Teknik Kendaraan Ringan Dan Otomotif</h5>
+                        </div>
+                        <img src="{{ asset('assets/images/to.png') }}" width="100" height="100" class="ms-auto" alt="TO">
                     </div>
-                    <img src="{{ asset('assets/images/to.png') }}" width="100" height="100" class="ms-auto" alt="Program Keahlian">
-                </div>
+                </a>
             </div>
 
-            <div class="col-lg-3">
+            {{-- TP --}}
+        <div class="col-lg-3">
+            <a href="{{ route('detailtp') }}" class="statistik-link">
                 <div class="bg-white rounded-3 shadow p-3 d-flex align-items-center">
                     <div class="stat-text ms-3">
                         <h5>Teknik Pengelasan Dan Fabrikasi Logam</h5>
                     </div>
-                    <img src="{{ asset('assets/images/tp.png') }}" width="100" height="100" class="ms-auto" alt="Prestasi">
+                    <img src="{{ asset('assets/images/tp.png') }}" width="100" height="100" class="ms-auto" alt="TP">
                 </div>
-            </div>
+            </a>
+        </div>
+
         </div>
     </div>
 </section>
@@ -188,7 +208,7 @@
             </p>
         </div>
 
-        <div class="feedback-card mx-auto">
+        <div class="feedback-card col-lg-8 col-xl-7 mx-auto">
 
             <form action="{{ route('feedback.store') }}" method="POST">
 

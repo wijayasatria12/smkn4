@@ -15,6 +15,22 @@ Route::get('/', function () {
     return view('welcome', compact('beritas', 'galeris'));
 })->name('home');
 
+Route::get('/detailpplg', function () {
+    return view('Frontend.statistik.detailpplg');
+})->name('detailpplg');
+
+Route::get('/detailtkj', function () {
+    return view('Frontend.statistik.detailtkj');
+})->name('detailtkj');
+
+Route::get('/detailto', function () {
+    return view('Frontend.statistik.detailto');
+})->name('detailto');
+
+Route::get('/detailtp', function () {
+    return view('Frontend.statistik.detailtp');
+})->name('detailtp');
+
 Route::post('/feedback', [FeedbackController::class, 'store'])
     ->name('feedback.store');
 
@@ -92,3 +108,4 @@ Route::get('/dashboard/feedback', [FeedbackController::class, 'index'])
 Route::delete('/dashboard/feedback/{feedback}', [FeedbackController::class, 'destroy'])
     ->name('dashboard.feedback.destroy')
     ->middleware('auth');
+

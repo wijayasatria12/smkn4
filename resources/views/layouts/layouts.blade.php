@@ -17,9 +17,15 @@
 <body>
 
     {{-- Navbar --}}
-    @if (!Request::is('detail/*'))
-        @include('layouts.navbar')
-    @endif
+@if (
+    !Request::is('detail/*') &&
+    !Request::is('detailpplg') &&
+    !Request::is('detailtkj') &&
+    !Request::is('detailto') &&
+    !Request::is('detailtp')
+)
+    @include('layouts.navbar')
+@endif
 
     <main>
     {{-- Content --}}
